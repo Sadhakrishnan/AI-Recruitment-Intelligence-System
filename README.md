@@ -1,426 +1,506 @@
 # AI Recruitment Intelligence System
-🎯 Final Goal
 
-Build an end-to-end AI-powered Recruitment Intelligence Platform that automatically parses resumes and job descriptions, semantically matches candidates to roles, ranks applicants, detects skill gaps, generates interview questions, and produces recruiter-style hiring insights using multi-agent AI workflows and RAG-based retrieval.
+An enterprise-grade AI-powered recruitment intelligence and candidate evaluation platform that uses semantic embeddings, multi-agent reasoning, recruiter intelligence, RAG-powered search, and explainable ranking systems to automate modern hiring workflows.
 
-The final system should function like an enterprise-grade:
+---
 
-- AI Recruitment Copilot
-- Intelligent ATS Platform
-- Candidate Evaluation Engine
-- Talent Intelligence System
+## 🚀 Features
 
-rather than just a keyword-matching resume screener.
+* Resume parsing and structured extraction
+* Job description understanding
+* Semantic candidate-job matching
+* AI-powered candidate ranking
+* Skill-gap analysis
+* ATS resume scoring
+* Interview question generation
+* Recruiter insight generation
+* RAG-powered talent search
+* Multi-agent evaluation workflows
+* Analytics dashboard
+* Downloadable recruiter reports
 
-🧠 Full System Architecture
+---
 
-Resume Uploads + Job Descriptions
-→ Document Parsing Pipeline
-→ Information Extraction Engine
-→ Embedding + Vector Database
-→ Semantic Matching Engine
-→ Candidate Ranking System
-→ Multi-Agent Evaluation Layer
-→ AI Recruiter Reasoning
-→ Dashboard + Reports + Talent Search
+## 🎯 Project Goal
 
-Specialized AI Agents
+The system can:
 
-- Resume Parser Agent
-- JD Understanding Agent
-- Semantic Matching Agent
-- Skill Gap Agent
-- Ranking Agent
-- ATS Analysis Agent
-- Interview Question Agent
-- Recruiter Insight Agent
-- Talent Search Agent
-- Report Generation Agent
+✅ Parse resumes automatically from PDF/DOCX/TXT
+✅ Extract candidate skills, experience, projects, and education
+✅ Understand job descriptions semantically
+✅ Match candidates using embedding similarity
+✅ Rank applicants intelligently using weighted scoring
+✅ Detect missing skills and generate learning recommendations
+✅ Generate adaptive interview questions
+✅ Provide recruiter-style hiring insights
+✅ Support semantic recruiter search using RAG
+✅ Generate professional hiring reports and analytics
 
-🧩 Detailed Component Requirements
+### Example Output
 
-1️⃣ Resume Ingestion Pipeline
-
-Support uploads for:
-- PDF resumes
-- DOCX resumes
-- TXT resumes
-
-Optional:
-- scanned resume OCR support
-
-Libraries:
-- PyMuPDF
-- pdfplumber
-- python-docx
-- Tesseract OCR
-- EasyOCR
-
-Features:
-- batch uploads
-- metadata tracking
-- parsing validation
-- OCR fallback
-- duplicate detection
-- resume versioning
-
-2️⃣ Resume Parsing Engine 🔥
-
-Extract:
-- candidate name
-- email
-- phone
-- LinkedIn/GitHub
-- skills
-- education
-- certifications
-- projects
-- work experience
-- years of experience
-- technologies used
-
-Use Hybrid Parsing:
-- regex extraction
-- spaCy NER
-- LLM structured extraction
-
-Advanced Features:
-- normalize skill names
-- normalize company names
-- normalize education degrees
-- abbreviation expansion
-
-3️⃣ Job Description Understanding Engine 🔥
-
-Extract:
-- required skills
-- preferred skills
-- responsibilities
-- seniority level
-- tools/frameworks
-- domain expertise
-- years of experience
-- soft skills
-
-Detect:
-- mandatory vs optional skills
-- hiring urgency
-- leadership requirements
-- role category
-
-4️⃣ Semantic Matching Engine (CORE 🔥)
-
-Use:
-- Sentence Transformers
-- BGE embeddings
-- all-MiniLM-L6-v2
-
-Vector DB:
-- FAISS
-OR
-- ChromaDB
-
-Compute:
-- cosine similarity
-- semantic relevance
-- contextual project similarity
-
-Understand semantic similarity:
-- “LLM pipelines”
-≈ “Generative AI systems”
-≈ “RAG architecture”
-
-5️⃣ Candidate Ranking Engine 🔥
-
-Rank using:
-- semantic similarity
-- skill overlap
-- project relevance
-- experience
-- certifications
-- domain alignment
-- ATS quality
-
-Advanced Features:
-- recruiter-adjustable weights
-- explainable scoring
-- confidence scoring
-- ranking transparency
-
-6️⃣ Skill Gap Detection Agent 🔥
-
-Identify:
-- missing skills
-- weak technical areas
-- domain gaps
-
-Generate:
-- learning roadmap
-- certification suggestions
-- project recommendations
-- estimated learning difficulty
-
-7️⃣ Interview Question Generation Agent 🔥
-
-Generate:
-- technical questions
-- coding questions
-- behavioral questions
-- project-based questions
-- scenario-based interviews
-
-Adaptive generation based on:
-- candidate skills
-- seniority
-- projects
-- job role
-
-8️⃣ Recruiter Insight Agent 🔥
-
-Generate:
-- strengths
-- weaknesses
-- career trajectory analysis
-- project quality evaluation
-- hiring recommendation
-- confidence score
-- risk indicators
-
-9️⃣ ATS Resume Scoring System
-
-Analyze:
-- formatting quality
-- keyword optimization
-- readability
-- section organization
-- measurable achievements
-
-Generate:
-- ATS score
-- improvement suggestions
-- keyword recommendations
-
-🔟 Multi-Agent Architecture 🔥
-
-Use:
-- LangChain
-OR
-- CrewAI
-
-Workflow:
-Resume Parser Agent
-→ JD Analyzer Agent
-→ Semantic Matching Agent
-→ Ranking Agent
-→ Skill Gap Agent
-→ Interview Agent
-→ Recruiter Insight Agent
-→ ATS Analysis Agent
-→ Final Hiring Recommendation
-
-Requirements:
-- shared memory
-- collaborative reasoning
-- iterative refinement
-- explainable outputs
-
-1️⃣1️⃣ RAG-Powered Talent Search 🔥
-
-Recruiter Query Example:
-“Find candidates with OCR and computer vision experience.”
-
-Pipeline:
-Recruiter Query
-→ Embedding Search
-→ Vector Retrieval
-→ Candidate Ranking
-→ Final Results
-
-Features:
-- semantic recruiter search
-- natural language talent retrieval
-- multi-condition filtering
-
-1️⃣2️⃣ Backend API (FastAPI)
-
-Endpoints:
-POST /upload_resume
-POST /upload_job
-GET /rank_candidates
-GET /skill_gap
-POST /generate_questions
-POST /search_candidates
-GET /analytics
-GET /report
-
-Features:
-- async processing
-- batch handling
-- API validation
-- logging
-- scalable architecture
-
-1️⃣3️⃣ Frontend Dashboard
-
-Use:
-- Streamlit
-OR
-- React
-
-Dashboard Features:
-- Resume upload interface
-- Candidate ranking table
-- AI recruiter insights
-- Match score visualization
-- Skill-gap charts
-- Recruiter copilot chat
-- Downloadable reports
-- Candidate comparison view
-- Hiring analytics dashboard
-- Resume preview
-- Search filters
-
-1️⃣4️⃣ Database Design
-
-Use:
-- PostgreSQL
-
-Tables:
-- candidates
-- resumes
-- skills
-- job_descriptions
-- match_scores
-- interview_questions
-- recruiter_feedback
-
-Store:
-- embeddings
-- rankings
-- recruiter notes
-- evaluation history
-
-1️⃣5️⃣ Report Generation
-
-Generate:
-- PDF reports
-- DOCX reports
-
-Include:
-- candidate rankings
-- strengths/weaknesses
-- ATS score
-- skill gaps
-- interview questions
-- recruiter insights
-- hiring recommendation
-
-⚙️ Recommended Tech Stack
-
-NLP / AI:
-- Sentence Transformers
-- HuggingFace Transformers
-- spaCy
-- OpenAI GPT / Llama / Mistral
-
-RAG / Retrieval:
-- FAISS
-- ChromaDB
-
-Multi-Agent Framework:
-- LangChain
-OR
-- CrewAI
-
-Backend:
-- FastAPI
-
-Frontend:
-- Streamlit
-OR
-- React
-
-Database:
-- PostgreSQL
-
-📁 Suggested Project Structure
-
-ai-recruitment-intelligence/
-│
-├── ingestion/
-├── extraction/
-├── embeddings/
-├── agents/
-├── rag/
-├── analytics/
-├── api/
-├── frontend/
-├── reports/
-├── requirements.txt
-└── README.md
-
-🔥 Advanced Features
-
-1. Hiring Bias Detection
-- detect unfair ranking patterns
-- fairness analysis
-
-2. AI Resume Rewrite Suggestions
-- improve ATS optimization
-- enhance project descriptions
-
-3. Recruiter Copilot Chat
-- explain candidate rankings
-- answer recruiter queries
-
-4. Candidate Clustering
-- cluster by skills
-- cluster by experience
-
-5. Salary Estimation
-- estimate salary ranges using skills and experience
-
-📊 Metrics to Track
-
-- semantic retrieval accuracy
-- ranking quality
-- ATS scoring accuracy
-- recruiter satisfaction score
-- retrieval latency
-- hiring recommendation confidence
-
-🎯 Example Final Output
-
+```
 {
   "candidate": "John Doe",
-  "semantic_match_score": 0.91,
-  "rank_score": 92,
-  "ats_score": 84,
-  "missing_skills": [
-    "Docker",
-    "Kubernetes"
+  "semantic_score": 0.91,
+  "rank_score": 94,
+  "missing_skills": ["Kubernetes", "Docker"],
+  "hire_recommendation": "Strong Match",
+  "interview_questions": [
+    "Explain how vector databases improve retrieval in RAG systems."
   ],
-  "recommendation": "Strong candidate for AI Engineer role"
+  "recruiter_insight": "Strong AI backend engineering profile with excellent RAG project experience but limited DevOps exposure."
 }
+```
 
-💡 Important Development Instructions
+---
 
-- Keep architecture modular and scalable
-- Focus heavily on semantic matching
-- Avoid keyword-only matching
-- Use explainable ranking systems
-- Add proper logging and monitoring
-- Support large-scale resume batches
-- Maintain recruiter-quality UI/UX
-- Build reusable multi-agent components
-- Ground outputs using retrieval-based reasoning
+## 🧠 System Architecture
 
-🔥 Final Product Goal
+```
+Resume PDFs + Job Descriptions
+            ↓
+Document Parsing Pipeline
+            ↓
+Information Extraction Engine
+            ↓
+Embedding + Semantic Similarity Engine
+            ↓
+Candidate Ranking System
+            ↓
+Multi-Agent Evaluation Layer
+ ├── Resume Parser Agent
+ ├── Semantic Matching Agent
+ ├── Skill Gap Agent
+ ├── Candidate Ranking Agent
+ ├── Interview Question Agent
+ ├── Recruiter Insight Agent
+ ├── ATS Analysis Agent
+            ↓
+LLM Reasoning + Recommendations
+            ↓
+Dashboard + Reports + Search Interface
+```
 
-The final system should feel like:
+---
 
-“An enterprise-grade AI Recruitment Intelligence Platform capable of semantic talent discovery, intelligent candidate ranking, recruiter-style reasoning, and autonomous hiring workflows using RAG and multi-agent AI.”
+## 🛠️ Tech Stack
 
-NOT:
-❌ A simple ATS keyword matcher
-✅ A real AI-powered recruitment copilot used by modern hiring teams
+### NLP / Embeddings
+
+* Sentence Transformers
+* HuggingFace Transformers
+* BGE Embeddings
+* all-MiniLM-L6-v2
+* spaCy
+
+### Vector Database / RAG
+
+* FAISS
+* ChromaDB
+
+### Multi-Agent Framework
+
+* LangChain
+* CrewAI
+
+### Backend
+
+* FastAPI
+
+### Frontend
+
+* Streamlit
+* React
+
+### Database
+
+* PostgreSQL
+
+### AI / LLM
+
+* OpenAI GPT
+* Mistral
+* LLaMA
+
+### Document Processing
+
+* PyMuPDF
+* pdfplumber
+* python-docx
+* Tesseract OCR
+* EasyOCR
+
+---
+
+## 📄 Resume Ingestion Pipeline
+
+Supports:
+
+* PDF resumes
+* DOCX resumes
+* TXT resumes
+* Batch uploads
+* OCR for scanned resumes
+
+Capabilities:
+
+* File validation
+* Text extraction
+* Metadata handling
+* Parsing error handling
+* Batch processing
+
+---
+
+## 🔍 Resume Parsing Engine
+
+Extracts:
+
+* Candidate name
+* Email and phone number
+* LinkedIn/GitHub profiles
+* Technical skills
+* Soft skills
+* Education details
+* Certifications
+* Projects
+* Work experience
+* Years of experience
+* Technologies used
+
+Uses:
+
+* spaCy NER
+* Regex extraction
+* LLM-based structured extraction
+
+Example:
+
+```
+{
+  "name": "John Doe",
+  "skills": ["Python", "FastAPI", "PyTorch"],
+  "experience_years": 3,
+  "projects": ["RAG chatbot", "OCR pipeline"]
+}
+```
+
+---
+
+## 🧠 Job Description Understanding Engine
+
+Extracts:
+
+* Required skills
+* Preferred skills
+* Experience requirements
+* Responsibilities
+* Tools/frameworks
+* Domain knowledge
+* Soft skills
+
+Features:
+
+* Mandatory vs optional skill detection
+* Seniority classification
+* Technology stack extraction
+* Role category inference
+
+Example:
+
+```
+{
+  "required_skills": ["Python", "LangChain", "RAG"],
+  "experience_required": 2
+}
+```
+
+---
+
+## 🔥 Semantic Matching Engine
+
+Core AI matching system using embeddings.
+
+Uses:
+
+* Sentence Transformers
+* Cosine similarity
+* Semantic embeddings
+* Vector search
+
+Understands semantic similarity:
+
+```
+Generative AI ≈ LLM Systems ≈ RAG Pipelines
+```
+
+Vector Storage:
+
+* FAISS
+* ChromaDB
+
+Example:
+
+```
+{
+  "candidate": "John Doe",
+  "semantic_score": 0.89
+}
+```
+
+---
+
+## 📊 Candidate Ranking Engine
+
+Ranks candidates using:
+
+* Semantic similarity
+* Skill overlap
+* Project relevance
+* Experience level
+* Domain alignment
+* Certification relevance
+
+Features:
+
+* Weighted scoring
+* Recruiter-adjustable priorities
+* Explainable ranking logic
+
+---
+
+## 🧩 Skill Gap Detection Agent
+
+Detects:
+
+* Missing skills
+* Weak skill areas
+* Learning gaps
+
+Generates:
+
+* Learning roadmaps
+* Certification suggestions
+* Project recommendations
+* Improvement strategies
+
+Example:
+
+```
+Missing Skills:
+- Kubernetes
+- Docker
+- LangChain
+```
+
+---
+
+## 🎤 Interview Question Generation Agent
+
+Generates:
+
+* Technical interview questions
+* Coding questions
+* Behavioral questions
+* Scenario-based questions
+* Project-based questions
+
+Adaptive based on:
+
+* Candidate skills
+* Job role
+* Seniority level
+
+---
+
+## 🧠 Recruiter Insight Agent
+
+Provides:
+
+* Candidate strengths
+* Weaknesses
+* Project quality analysis
+* Career trajectory insights
+* Role suitability assessment
+* Hire recommendations
+* Confidence score
+
+Example:
+
+> Strong backend AI engineering experience with excellent RAG system development but limited cloud deployment exposure.
+
+---
+
+## 📈 ATS Resume Scoring System
+
+Analyzes:
+
+* Resume formatting quality
+* Keyword optimization
+* Readability
+* Section structure
+* Missing information
+
+Output:
+
+```
+ATS Score: 84/100
+```
+
+---
+
+## 🔍 RAG-Powered Talent Search
+
+Example recruiter query:
+
+```
+Find candidates with OCR and computer vision experience.
+```
+
+Flow:
+
+```
+Recruiter Query
+        ↓
+Embedding Search
+        ↓
+Semantic Retrieval
+        ↓
+Ranked Candidate Results
+```
+
+---
+
+## 🤖 Multi-Agent Architecture
+
+Agents:
+
+* Resume Parser Agent
+* Semantic Matching Agent
+* Ranking Agent
+* Skill Gap Agent
+* Interview Agent
+* Recruiter Insight Agent
+* ATS Analysis Agent
+
+Features:
+
+* Shared memory
+* Collaborative reasoning
+* Context passing
+* Iterative evaluation
+
+---
+
+## 📊 Analytics Dashboard
+
+Features:
+
+* Candidate ranking table
+* Match score visualization
+* Skill-gap charts
+* Hiring analytics
+* Recruiter AI insights
+* Resume preview
+* Candidate comparison
+* Search filters
+* Interactive graphs
+
+---
+
+## 🌐 Backend API
+
+Endpoints:
+
+* POST /upload_resume
+* POST /upload_job
+* GET /rank_candidates
+* GET /skill_gap
+* POST /generate_questions
+* POST /search_candidates
+* GET /analytics
+* GET /report
+
+---
+
+## 🗄️ Database Design
+
+PostgreSQL tables:
+
+* candidates
+* resumes
+* skills
+* job_descriptions
+* match_scores
+* interview_questions
+* recruiter_feedback
+---
+
+## ⚙️ Installation
+
+```
+git clone https://github.com/your-username/ai-recruitment-intelligence.git
+cd ai-recruitment-intelligence
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Run the Project
+
+Start backend:
+
+```
+uvicorn api.main:app --reload
+```
+
+Launch dashboard:
+
+```
+streamlit run frontend/dashboard.py
+```
+
+---
+
+## 📥 Report Generation
+
+Generates:
+
+* PDF reports
+* DOCX recruiter reports
+
+Includes:
+
+* Candidate ranking
+* Strengths and weaknesses
+* ATS score
+* Skill gaps
+* Interview questions
+* Recruiter recommendations
+
+---
+
+## 🔥 Advanced Features
+
+* Hiring bias detection
+* Fairness analysis
+* Voice interview analysis
+* AI resume rewrite suggestions
+* Candidate clustering
+* Salary estimation
+* Recruiter copilot chat assistant
+* Hiring trend analytics
+* Confidence-based recommendations
+
+---
+
+## 📊 Metrics
+
+* Semantic retrieval accuracy
+* Ranking quality
+* Candidate-job similarity
+* ATS scoring quality
+* Skill-gap precision
+* Recruiter satisfaction metrics
+
+
